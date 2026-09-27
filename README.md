@@ -10,29 +10,29 @@ To convert map .bin file to JSON: `python bin2json.py <BIN file> <JSON output>`
 To convert JSON to a map .bin file: `python json2bin.py <JSON file> <new BIN file>`
 - e.g., `python json2bin.py r_b_forest_layout.json r_b_forest_layout.bin`
 
-Make sure to make backups if you overwrite any original .bin files. Map .bin files may be found in the game's root folder, e.g., `Program Files (x86)/Steam/steamapps/common/ZERO Sievert`.
+Make sure to make backups if you overwrite any original .bin files. The map .bin files may be found in the game's root folder, e.g., `Program Files (x86)/Steam/steamapps/common/ZERO Sievert`.
 
 The code has been tested with Python 3.9.16 under CYGWIN.
 
-All .bin files of ZERO Sievert 1.3.3 have been successfully tested/compared  (using the `cmp` CYGWIN/Linux program).
+All .bin files of ZERO Sievert 1.3.3 have been successfully tested/compared, using the `cmp` CYGWIN/Linux program.
 
-ChatGPT was used to help generate the Python code.
+AI (ChatGPT) was used to help generate the Python code.
 
 # Additional modifications
 
-To suppress some other map generation objects, via UTMT (UnderTaleModTool) and v1.3.3's `data.win` file:
+To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file:
 
 ## Suppress NPCs
 
 In `gml_Object_obj_map_generator_Alarm_2`, line 2879, change:
-`var _amount = 12` to `var _amount = 0` - This will suppress NPC generation
+`var _amount = 12` to `var _amount = 0` -- This will suppress NPC generation
 
 Or if you want to apply it just to the forest map:
 ```
 if (area == UnknownEnum.Value_1)
    `var _amount = 0
 ```
-Note: This does not suppress mob generation (wolves, boars, and mutants).
+Note: This does not suppress mob generation (wolves, boars, and mutants); see below.
 
 ## Suppress other objects
 
@@ -76,36 +76,37 @@ if (x == 1) {
 }
 ```
 
-To suppress water/pond generation, back in `gml_Object_obj_map_generator_Alarm_2` (line 658, change:
+To suppress water/pond generation, back in `gml_Object_obj_map_generator_Alarm_2` (line 658) change:
 
 `if (area == UnknownEnum.Value_1)`
 
 into:
 
-`if (area == UnknownEnum.Value_1 && false)` to suppress to water generation loops.
+`if (area == UnknownEnum.Value_1 && false)` to suppress to the water generation loops.
 
 # Example/test maps
 
-To test these maps, better to implement the above patches and overwrite `r_b_forest_layout.bin` with one of the files below (but that's not fully necessary).
+To use these maps, I recommend first implementing the above patches, but that's not necessary for testing purposes. Choose a file below and overwrite `r_b_forest_layout.bin`.
 - The .bin files are located in the `bin/` folder.
 - Their corresponding JSON files are in the `json/` folder.
 - The JSON was generated via AI (ChatGPT).
+- These are all unpolished/proofs-of-concept. 
 
-These are all unpolished/proofs-of-concept. These are the more interesting ones:
-
-`forest_compact_4x4_clustered_blocks.bin` -- A custom village (does not show in minimap)
-`forest_cliff_maze_narrow.bin` -- A "maze" using cliff walls (does show in minimap)
-`forest_fence_maze.bin` -- A maze using fences
-`forest_quarry_compact_dense_enemies.bin` -- A quarry/arena populated with enemies
-`forest_quarry_hunters_watchers.bin` -- Another quarry/area populated with enemies
+These are the more interesting ones:
+- `forest_compact_4x4_clustered_blocks.bin` -- A custom village* in the center of the forest (where the original village is located)
+- `forest_cliff_maze_narrow.bin` -- A "maze" using cliff walls
+- `forest_fence_maze.bin` -- A maze using fences*
+- `forest_quarry_compact_dense_enemies.bin` -- A quarry/arena populated with enemies
+- `forest_quarry_hunters_watchers.bin` -- Another quarry/area populated with enemies
+- * = the test objects do not show in the PDA minimap
 
 Other test maps available in the `bin/` and `json/` folders.
 
 # Creating maps yourself via AI
 
-Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what you would need to attach to AI for it to populate/generate your own maps (as JSON). At minimum, it suggests:
-- The full forest JSON (not provided here), so it can learn many map components.
-- Some of the above example JSONs.
+Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to populate/generate your own maps (as JSON). At minimum, it suggests:
+- The full forest JSON, so it can learn many map components. The JSON of the original forest map is not provided here (unless I get Cabo's permission). You can easily create your own via the `bin2json.py` code.
+- Some (or all) of the above example JSONs.
 - The `npc.json` file found in `ZS_vanilla/gamedata`.
 
 After AI produces a JSON file, convert it into a .bin file and copy/overwrite `r_b_forest_layout.bin`.
