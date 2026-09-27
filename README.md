@@ -18,7 +18,7 @@ The code has been tested with Python 3.9.16 under CYGWIN.
 
 All .bin files of ZERO Sievert 1.3.3 have been successfully tested/compared, using the `cmp` CYGWIN/Linux program.
 
-AI (ChatGPT) was used to help generate the Python code.
+AI (ChatGPT) was used to help generate the Python code. If you're unfamiliar with Python, you could probably have AI run the code.
 
 # Additional modifications
 
