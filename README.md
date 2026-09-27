@@ -104,6 +104,8 @@ These are the more interesting ones:
 
 Other test maps available in the `bin/` and `json/` folders. I have not yet played around with the other maps (camp, mall, etc.), except for confirming the Python code can regenerate the original .bin files.
 
+You will likely encounter an error pop-up dialog (VertexBuilderM.cpp), but it doesn't crash the game.
+
 # Creating maps yourself via AI
 
 Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give AI along with your prompt, for it to learn the map structure and populate/generate your own map. At minimum, it suggests:
