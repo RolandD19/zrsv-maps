@@ -91,7 +91,7 @@ into:
 To use these maps, I recommend first implementing the above patches, but that's not necessary for testing purposes. Choose a file below and overwrite `r_b_forest_layout.bin`.
 - The .bin files are located in the `bin/` folder.
 - Their corresponding JSON files are in the `json/` folder.
-- The JSON was generated via AI (ChatGPT).
+- All of the example JSON were generated via AI (ChatGPT).
 - These are all unpolished/proofs-of-concept. 
 
 These are the more interesting ones:
