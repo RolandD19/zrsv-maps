@@ -25,7 +25,7 @@ To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1
 ## Suppress NPCs
 
 In `gml_Object_obj_map_generator_Alarm_2`, line 2879, change:
-`var _amount = 12` to `var _amount = 0` -- This will suppress NPC generation
+`var _amount = 12` to `var _amount = 0` – This will suppress NPC generation
 
 Or if you want to apply it just to the forest map:
 ```
@@ -76,9 +76,9 @@ if (x == 1) {
 }
 ```
 
-To suppress water/pond generation, back in `gml_Object_obj_map_generator_Alarm_2` (line 658) change:
+To suppress water/pond generation (again in forest only), back in `gml_Object_obj_map_generator_Alarm_2` (line 658) change:
 
-`if (area == UnknownEnum.Value_1)`
+`if (area == UnknownEnum.Value_1)` // UnknownEnum.Value_1 is the forest map
 
 into:
 
@@ -93,11 +93,11 @@ To use these maps, I recommend first implementing the above patches, but that's 
 - These are all unpolished/proofs-of-concept. 
 
 These are the more interesting ones:
-- `forest_compact_4x4_clustered_blocks.bin` -- A custom village* in the center of the forest (where the original village is located)
-- `forest_cliff_maze_narrow.bin` -- A "maze" using cliff walls
-- `forest_fence_maze.bin` -- A maze using fences*
-- `forest_quarry_compact_dense_enemies.bin` -- A quarry/arena populated with enemies
-- `forest_quarry_hunters_watchers.bin` -- Another quarry/area populated with enemies
+- `forest_compact_4x4_clustered_blocks.bin` – A custom village* in the center of the forest (where the original village is located)
+- `forest_cliff_maze_narrow.bin` – A "maze" using cliff walls
+- `forest_fence_maze.bin` – A maze using fences*
+- `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies
+- `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies
 - * = the test objects do not show in the PDA minimap
 
 Other test maps available in the `bin/` and `json/` folders.
@@ -105,7 +105,7 @@ Other test maps available in the `bin/` and `json/` folders.
 # Creating maps yourself via AI
 
 Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to populate/generate your own maps (as JSON). At minimum, it suggests:
-1. The full forest JSON -- so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
+1. The full forest JSON – so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
   - For those unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file.
 2. Some (or all) of the above example JSONs.
 3. The `npc.json` file found in `ZS_vanilla/gamedata`, if you want your map populated with any NPCs or mobs.
