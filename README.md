@@ -102,7 +102,7 @@ These are the more interesting ones:
 - `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies<br>
 \* = the test objects do not show in the PDA minimap
 
-Other test maps available in the `bin/` and `json/` folders. I have not yet played around with the other maps, except for confirming the Python code can regenerate the original .bin files.
+Other test maps available in the `bin/` and `json/` folders. I have not yet played around with the other maps (camp, mall, etc.), except for confirming the Python code can regenerate the original .bin files.
 
 # Creating maps yourself via AI
 
