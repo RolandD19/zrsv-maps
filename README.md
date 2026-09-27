@@ -96,10 +96,10 @@ To use these maps, I recommend first implementing the above patches, but that's 
 
 These are the more interesting ones:
 - `forest_compact_4x4_clustered_blocks.bin` – A custom village* in the center of the forest (where the original village is located) ![](images/example-custom-village.png)
-- `forest_cliff_maze_narrow.bin` – A "maze" using cliff walls
+- `forest_cliff_maze_narrow.bin` – A "maze" using cliff walls ![](images/example-maze.png)
 - `forest_fence_maze.bin` – A maze using fences*
-- `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies
-- `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies<br>
+- `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies ![](images/example-arena.png)
+- `forest_quarry_hunters_watchers.bin` – Another quarry/arena populated with enemies<br>
 \* = the test objects do not show in the PDA minimap
 
 Other test maps available in the `bin/` and `json/` folders. I have not yet played around with the other maps (camp, mall, etc.), except for confirming the Python code can regenerate the original .bin files.
