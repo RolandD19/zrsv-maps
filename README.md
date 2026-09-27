@@ -22,7 +22,7 @@ AI (ChatGPT) was used to help generate the Python code. If you're unfamiliar wit
 
 # Additional modifications
 
-To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file. The code below does not result in a completely blank map. The grass/ground and train tracks are still rendered.
+To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file, apply the patches below. The code below does not result in a completely blank map. The grass/ground and train tracks are still rendered.
 
 ## Suppress NPCs
 
@@ -102,17 +102,17 @@ These are the more interesting ones:
 - `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies
 - \* = the test objects do not show in the PDA minimap
 
-Other test maps available in the `bin/` and `json/` folders.
+Other test maps available in the `bin/` and `json/` folders. I have not yet played around with the other maps, except for confirming the Python code can regenerate the original .bin files.
 
 # Creating maps yourself via AI
 
-Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to populate/generate your own maps (as JSON). At minimum, it suggests:
+Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to learn the map structure and populate/generate your own maps. At minimum, it suggests:
 1. The full forest JSON – so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
    - If you're unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file, as part of your prompt.
 2. Some (or all) of the above example JSONs.
 3. The `npc.json` file found in `ZS_vanilla/gamedata` – if you want your map populated with any NPCs or mobs.
 
-After AI produces a JSON file, convert it into a .bin file and copy/overwrite `r_b_forest_layout.bin`.
+After AI produces a JSON file, convert it into a .bin file (AI could probably do that for you too) and copy/overwrite `r_b_forest_layout.bin`.
 
 My other GitHub ZERO Sievert resources:
 - [Loot goblin tips](https://github.com/RolandD19/zrsv-loot-goblin) -- Tables and tips if you want to maximize your loot
