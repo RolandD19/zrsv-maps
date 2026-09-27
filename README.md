@@ -99,8 +99,8 @@ These are the more interesting ones:
 - `forest_cliff_maze_narrow.bin` – A "maze" using cliff walls
 - `forest_fence_maze.bin` – A maze using fences*
 - `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies
-- `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies
-- \* = the test objects do not show in the PDA minimap
+- `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies<br>
+\* = the test objects do not show in the PDA minimap
 
 Other test maps available in the `bin/` and `json/` folders. I have not yet played around with the other maps, except for confirming the Python code can regenerate the original .bin files.
 
