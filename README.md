@@ -123,4 +123,4 @@ The ultimate (perhaps too ambitious) goal of this project is for one to able to 
 - Realizing this, at minimum, would require additional coding "hooks" in the original code -- probably a modding framework more expansive or different than Catspeak/Steam Workshop -- that AI can latch onto (i.e. call its own GML functions or use its generated story-spec JSON).
 
 My other GitHub ZERO Sievert resources:
-- [Loot goblin tips](https://github.com/RolandD19/zrsv-loot-goblin) -- Tables and tips if you want to maximize your loot
+- [Loot goblin tips](https://github.com/RolandD19/zrsv-loot-goblin) -- Tables and tips if you want to maximize the value of your loot
