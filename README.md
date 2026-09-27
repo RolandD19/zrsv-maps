@@ -106,7 +106,7 @@ Other test maps available in the `bin/` and `json/` folders. I have not yet play
 
 # Creating maps yourself via AI
 
-Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to learn the map structure and populate/generate your own maps. At minimum, it suggests:
+Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give AI along with your prompt, for it to learn the map structure and populate/generate your own map. At minimum, it suggests:
 1. The full forest JSON – so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
    - If you're unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file, as part of your prompt.
 2. Some (or all) of the above example JSONs.
