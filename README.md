@@ -1,6 +1,8 @@
-# zrsv-maps
+# Adjusting or creating your own ZERO Sievert map (zrsv-maps)
 
 Python code to deserialize ZERO Sievert's .bin (map/room) files into JSON and vice versa (serialize JSON into .bin) and some custom test forest maps.
+
+_Currently, everything on this page has been only minimally tested and is intended as proof-of-concept._
 
 # Instructions 
 
@@ -98,8 +100,7 @@ These are the more interesting ones:
 - `forest_fence_maze.bin` – A maze using fences*
 - `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies
 - `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies
-
-* = the test objects do not show in the PDA minimap
+- \* = the test objects do not show in the PDA minimap
 
 Other test maps available in the `bin/` and `json/` folders.
 
@@ -107,8 +108,11 @@ Other test maps available in the `bin/` and `json/` folders.
 
 Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to populate/generate your own maps (as JSON). At minimum, it suggests:
 1. The full forest JSON – so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
-  - If you're unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file, as part of your prompt.
+   - If you're unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file, as part of your prompt.
 2. Some (or all) of the above example JSONs.
 3. The `npc.json` file found in `ZS_vanilla/gamedata` – if you want your map populated with any NPCs or mobs.
 
 After AI produces a JSON file, convert it into a .bin file and copy/overwrite `r_b_forest_layout.bin`.
+
+My other GitHub ZERO Sievert resources:
+- [Loot goblin tips](https://github.com/RolandD19/zrsv-loot-goblin) -- Tables and tips if you want to maximize your loot
