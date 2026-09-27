@@ -22,7 +22,7 @@ AI (ChatGPT) was used to help generate the Python code. If you're unfamiliar wit
 
 # Additional modifications
 
-To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file, apply the patches below. The code below does not result in a completely blank map. The grass/ground and train tracks are still rendered.
+To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file, apply the patches below. The code below does not result in a completely blank map; the grass/ground and train tracks are still rendered.
 
 ## Suppress NPCs
 
@@ -95,7 +95,7 @@ To use these maps, I recommend first implementing the above patches, but that's 
 - These are all unpolished/proofs-of-concept. 
 
 These are the more interesting ones:
-- `forest_compact_4x4_clustered_blocks.bin` – A custom village* in the center of the forest (where the original village is located)
+- `forest_compact_4x4_clustered_blocks.bin` – A custom village* in the center of the forest (where the original village is located) ![](images/example-custom-village.png)
 - `forest_cliff_maze_narrow.bin` – A "maze" using cliff walls
 - `forest_fence_maze.bin` – A maze using fences*
 - `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies
