@@ -120,7 +120,7 @@ After AI produces a JSON file, convert it into a .bin file (AI could probably do
 # Afterthought
 
 The ultimate (perhaps too ambitious) goal of this project is for one to able to prompt to AI something like: _Make me a post-apocalyptic campaign/storyline that could fit in the world of ZERO Sievert. Don't tell me any details; just produce the necessary maps and code adjustments._
-- Realizing this, at minimum, would require additional coding "hooks" in the original code -- probably a modding framework more expansive or different than Catspeak/Steam Workshop -- that AI can latch onto (i.e. call its own GML functions).
+- Realizing this, at minimum, would require additional coding "hooks" in the original code -- probably a modding framework more expansive or different than Catspeak/Steam Workshop -- that AI can latch onto (i.e. call its own GML functions or use its generated story-spec JSON).
 
 My other GitHub ZERO Sievert resources:
 - [Loot goblin tips](https://github.com/RolandD19/zrsv-loot-goblin) -- Tables and tips if you want to maximize your loot
