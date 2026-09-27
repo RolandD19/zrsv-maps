@@ -98,7 +98,8 @@ These are the more interesting ones:
 - `forest_fence_maze.bin` – A maze using fences*
 - `forest_quarry_compact_dense_enemies.bin` – A quarry/arena populated with enemies
 - `forest_quarry_hunters_watchers.bin` – Another quarry/area populated with enemies
-- * = the test objects do not show in the PDA minimap
+
+* = the test objects do not show in the PDA minimap
 
 Other test maps available in the `bin/` and `json/` folders.
 
