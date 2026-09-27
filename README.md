@@ -20,11 +20,11 @@ ChatGPT was used to help generate the Python code.
 
 # Additional modifications
 
-To suppress some other map generation objects, via UTMT (UnderTaleModTool):
+To suppress some other map generation objects, via UTMT (UnderTaleModTool) and v1.3.3's `data.win` file:
 
 ## Suppress NPCs
 
-In `gml_Object_obj_map_generator_Alarm_2`, line 2879 (of 1.3.3), change:
+In `gml_Object_obj_map_generator_Alarm_2`, line 2879, change:
 `var _amount = 12` to `var _amount = 0` - This will suppress NPC generation
 
 Or if you want to apply it just to the forest map:
@@ -83,3 +83,29 @@ To suppress water/pond generation, back in `gml_Object_obj_map_generator_Alarm_2
 into:
 
 `if (area == UnknownEnum.Value_1 && false)` to suppress to water generation loops.
+
+# Example/test maps
+
+To test these maps, better to implement the above patches and overwrite `r_b_forest_layout.bin` with one of the files below (but that's not fully necessary).
+- The .bin files are located in the `bin/` folder.
+- Their corresponding JSON files are in the `json/` folder.
+- The JSON was generated via AI (ChatGPT).
+
+These are all unpolished/proofs-of-concept. These are the more interesting ones:
+
+`forest_compact_4x4_clustered_blocks.bin` -- A custom village (does not show in minimap)
+`forest_cliff_maze_narrow.bin` -- A "maze" using cliff walls (does show in minimap)
+`forest_fence_maze.bin` -- A maze using fences
+`forest_quarry_compact_dense_enemies.bin` -- A quarry/arena populated with enemies
+`forest_quarry_hunters_watchers.bin` -- Another quarry/area populated with enemies
+
+Other test maps available in the `bin/` and `json/` folders.
+
+# Creating maps yourself via AI
+
+Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what you would need to attach to AI for it to populate/generate your own maps (as JSON). At minimum, it suggests:
+- The full forest JSON (not provided here), so it can learn many map components.
+- Some of the above example JSONs.
+- The `npc.json` file found in `ZS_vanilla/gamedata`.
+
+After AI produces a JSON file, convert it into a .bin file and copy/overwrite `r_b_forest_layout.bin`.
