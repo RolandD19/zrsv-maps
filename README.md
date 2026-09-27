@@ -106,8 +106,8 @@ Other test maps available in the `bin/` and `json/` folders.
 
 Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to populate/generate your own maps (as JSON). At minimum, it suggests:
 1. The full forest JSON – so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
-  - For those unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file.
+  - If you're unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file, as part of your prompt.
 2. Some (or all) of the above example JSONs.
-3. The `npc.json` file found in `ZS_vanilla/gamedata`, if you want your map populated with any NPCs or mobs.
+3. The `npc.json` file found in `ZS_vanilla/gamedata` – if you want your map populated with any NPCs or mobs.
 
 After AI produces a JSON file, convert it into a .bin file and copy/overwrite `r_b_forest_layout.bin`.
