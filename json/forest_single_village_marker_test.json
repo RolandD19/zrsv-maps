@@ -1,0 +1,89 @@
+{
+  "format": "ZS",
+  "version": 1,
+  "building_name": "r_b_forest_layout",
+  "header_string": "{}",
+  "header_json": {},
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "index": 0,
+      "name": "inst",
+      "data": {
+        "count": 1,
+        "items": [
+          {
+            "x": 2400.0,
+            "y": 2400.0,
+            "object": "obj_dcm_forest_village_1"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "name": "fence grid",
+      "data": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "index": 2,
+      "name": "decor",
+      "data": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "index": 3,
+      "name": "grid",
+      "data": {
+        "grid": "floor2",
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "index": 4,
+      "name": "grid + tiles",
+      "data": {
+        "grid": "strada",
+        "count": 0,
+        "grid_value": 1,
+        "items": []
+      }
+    },
+    {
+      "index": 5,
+      "name": "water",
+      "data": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "index": 6,
+      "name": "grid + tiles",
+      "data": {
+        "grid": "parking",
+        "count": 0,
+        "grid_value": 1,
+        "items": []
+      }
+    },
+    {
+      "index": 7,
+      "name": "grid + tiles",
+      "data": {
+        "grid": "railroad",
+        "count": 0,
+        "grid_value": 2,
+        "items": []
+      }
+    }
+  ],
+  "final_offset": 13776,
+  "file_size": 13776
+}

@@ -20,7 +20,7 @@ AI (ChatGPT) was used to help generate the Python code.
 
 # Additional modifications
 
-To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file:
+To suppress some other map generation objects, via UTMT (UnderTaleModTool) in v1.3.3's `data.win` file. The code below does not result in a completely blank map. The grass/ground and train tracks are still rendered.
 
 ## Suppress NPCs
 
@@ -105,8 +105,9 @@ Other test maps available in the `bin/` and `json/` folders.
 # Creating maps yourself via AI
 
 Because the above maps were generated as part of a long ChatGPT thread, I'm not fully sure what (files) you would need to give to AI with your prompt, for it to populate/generate your own maps (as JSON). At minimum, it suggests:
-- The full forest JSON, so it can learn many map components. The JSON of the original forest map is not provided here (unless I get Cabo's permission). You can easily create your own via the `bin2json.py` code.
-- Some (or all) of the above example JSONs.
-- The `npc.json` file found in `ZS_vanilla/gamedata`.
+1. The full forest JSON -- so it can learn many map components. The JSON of the original forest map is not provided here. You can easily create your own by using the `bin2json.py` code on the `r_b_forest_layout.bin` file.
+  - For those unfamiliar with Python, you could give AI the `bin2json.py` and the forest map .bin file.
+2. Some (or all) of the above example JSONs.
+3. The `npc.json` file found in `ZS_vanilla/gamedata`, if you want your map populated with any NPCs or mobs.
 
 After AI produces a JSON file, convert it into a .bin file and copy/overwrite `r_b_forest_layout.bin`.
