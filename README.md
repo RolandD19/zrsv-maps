@@ -18,11 +18,11 @@ All .bin files of ZERO Sievert 1.3.3 have been successfully tested/compared  (u
 
 ChatGPT was used to help generate the Python code.
 
-## Additional modifications
+# Additional modifications
 
 To suppress some other map generation objects, via UTMT (UnderTaleModTool):
 
-### Suppress NPCs
+## Suppress NPCs
 
 In `gml_Object_obj_map_generator_Alarm_2`, line 2879 (of 1.3.3), change:
 `var _amount = 12` to `var _amount = 0` - This will suppress NPC generation
@@ -52,16 +52,34 @@ if (x == 1) {
 }
 ```
 
-For buildings, trees/rocks/decor (in forest map only), change lines 7451-7452): 
+For buildings, trees/rocks/decor (in forest map only), change lines 7451-7452: 
 ```
 area_different_building[a] = array_length_2d(area_building_list, a);
 area_decor_number[a] = 22000;
 ```
 into:
-`area_different_building[a] = 0` // Suppress the various buildings
-`area_decor_number[a] = 0` // Suppresses rocks, trees, etc.
+```
+area_different_building[a] = 0 // Suppress the various buildings
+area_decor_number[a] = 0` // Suppresses rocks, trees, etc.
+```
+
+Or (to preserve the original code):
+
+```
+x = 0
+if (x == 1) {
+  area_different_building[a] = array_length_2d(area_building_list, a);
+  area_decor_number[a] = 22000;
+} else {
+  area_different_building[a] = 0 // Suppress the various buildings
+  area_decor_number[a] = 0` // Suppresses rocks, trees, etc.
+}
+```
 
 To suppress water/pond generation, back in `gml_Object_obj_map_generator_Alarm_2` (line 658, change:
+
 `if (area == UnknownEnum.Value_1)`
+
 into:
+
 `if (area == UnknownEnum.Value_1 && false)` to suppress to water generation loops.
